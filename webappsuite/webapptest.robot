@@ -77,20 +77,4 @@ KhanAcademyNativeAppScroll
     END
     Click Element    //*[@text='Partner content']  
     
-    
-winapp
-    Open Application    remote_url=http://localhost:4723/wd/hub
-    ...    platformName=Windows    deviceName=windows        app=C:\\Windows\\system32\\notepad.exe
-     Input Text    //*[@ClassName="Edit"]    Hello World
-     Click Element    //*[@Name="File"]
-     Click Element    //*[@Name="Exit"]
-     Sleep    2    
-     Click Element    //*[@Name="Save"]
-     Sleep    3    
-     Click Element    //Edit[@Name="File name:"]
-     Clear Text    //Edit[@Name="File name:"]
-     Input Text    //Edit[@Name="File name:"]    E:\\AutomatedText\\Hello_World.txt
-     Sleep    2    
-     Click Element    //Button[@Name="Save"]
-
 
