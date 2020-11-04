@@ -3,8 +3,8 @@ Library    AppiumLibrary
 
 *** Test Cases ***
 Facebook Login
-    Open Application    remote_url=http://localhost:4723/wd/hub
-    ...    platformName=android    deviceName=emulator    browserName=chrome        adbExecTimeout=30000    uiautomator2ServerInstallTimeout=150000       
+  Open Application    remote_url=http://localhost:4723/wd/hub
+    ...    platformName=android    noReset=true    deviceName=emulator    browserName=chrome        adbExecTimeout=30000    uiautomator2ServerInstallTimeout=150000       
     Set Appium Timeout    20
     Go To Url    https://m.facebook.com
     Input Text    //input[@id="m_login_email"]    sourab_john@yahoo.com
@@ -12,7 +12,7 @@ Facebook Login
     Sleep    2    
     Click Element    //button[@name="login"]
     Wait Until Page Contains    Invalid username or password       
-    Page Should Contain Element    //*[text()='Invalid username or password']    
+    Page Should Contain Element    //*[text()='Invalid username or password']  
     
 
 
@@ -59,7 +59,7 @@ KhanAcademyNativeApp
     Click Element    //*[@text='OK']
     Input Text    //*[@text='Email address']    sourabjacob@gmail.com	
     Input Text    //*[@text='Password']    sourabA12	
-    Scroll Down    locator
+
 
  
 KhanAcademyNativeAppScroll
